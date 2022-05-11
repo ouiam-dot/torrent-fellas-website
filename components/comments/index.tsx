@@ -41,7 +41,7 @@ const Comments = ({ frontMatter }: Props) => {
       term = frontMatter.title
       break
   }
-  return (
+  return siteMetadata.enableComment ? (
     <div id="comment">
       {siteMetadata.comment && siteMetadata.comment.provider === 'giscus' && (
         <GiscusComponent mapping={term} />
@@ -53,7 +53,7 @@ const Comments = ({ frontMatter }: Props) => {
         <DisqusComponent frontMatter={frontMatter} />
       )}
     </div>
-  )
+  ) : null
 }
 
 export default Comments

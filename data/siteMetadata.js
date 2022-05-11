@@ -31,6 +31,7 @@ const siteMetadata = {
     // Please add your .env file and modify it according to your selection
     provider: 'buttondown',
   },
+  enableComment: false,
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
     // content security policy in the `next.config.js` file.
